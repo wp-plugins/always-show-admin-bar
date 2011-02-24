@@ -4,7 +4,7 @@ Donate link: http://www.leewillis.co.uk/wordpress-plugins/?utm_source=wordpress&
 Tags: wp, admin, dashboard, admin bar
 Requires at least: 3.1
 Tested up to: 3.1
-Stable tag: 0.1
+Stable tag: 0.2
 
 Always shows the admin bar if the user has previously logged in to the site.
 
@@ -24,6 +24,9 @@ Install, activate :)
 1. Admin bar for non-logged in users
 
 == Changelog ==
+
+= 0.2 = 
+Minor bugfix
 
 = 0.1 =
 * Initial Release

@@ -4,28 +4,28 @@ Plugin Name: Always Show Admin Bar
 Plugin URI: http://www.leewillis.co.uk/wordpress-plugins/
 Description: Always show the admin bar
 Author: Lee Willis
-Version: 0.2
+Version: 0.3
 Author URI: http://www.leewillis.co.uk/
 */
 
 class asabfa {
 
 	function __construct() {
-		add_action( 'plugins_loaded', array( $this, 'show_admin_bar' ) );
-		add_action( 'init', array( $this, 'add_login_links' ) );
+		add_action( 'init', array( $this, 'show_admin_bar' ) );
+		add_action( 'admin_bar_menu', array( $this, 'add_login_links' ), 11 );
 	}
 
 	function add_login_links() {
 		global $wp_admin_bar;
-		if ($this->is_logged_in())
+		if ( $this->is_logged_in() )
 			return;
-		if (isset($wp_admin_bar))
+		if ( isset( $wp_admin_bar ) )
 			$wp_admin_bar->add_menu( array( 'id' => 'login-link', 'title' => __( 'Not Logged in, login here', 'asabfa' ), 'href' => admin_url() ) );
 	}
 
 	function has_logged_in() {
 		// Have they ever logged in?
-		return isset ( $_COOKIE['asabfa_logged_in'] ) && $_COOKIE['asabfa_logged_in'] ;
+		return isset( $_COOKIE['asabfa_logged_in'] ) && $_COOKIE['asabfa_logged_in'] ;
 	}
 
 	function is_logged_in() {

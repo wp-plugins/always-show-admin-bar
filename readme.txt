@@ -3,7 +3,7 @@ Contributors: leewillis77
 Donate link: http://www.leewillis.co.uk/wordpress-plugins/?utm_source=wordpress&utm_medium=www&utm_campaign=always-show-admin-bar
 Tags: wp, admin, dashboard, admin bar
 Requires at least: 3.8
-Tested up to: 3.9
+Tested up to: 4.3
 Stable tag: 0.3
 
 Always shows the admin bar if the user has previously logged in to the site.
